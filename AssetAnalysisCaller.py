@@ -2,25 +2,9 @@ import AssetHelper
 import pandas as pd
 
 #Read looker export
-df=pd.read_csv('/Users/veefloyd/Desktop/NBCData/Creative Asset Table.csv')
+df=pd.read_csv('[PATH_TO_RAW_DATA_FILE]')
 #Make column names more friendly
-Assetdf=df.rename(columns={'NBC Integrated Platform Performance Created Date':'Date',
-       'NBC Integrated Platform Performance Creative':"Creative",
-       'NBC Integrated Platform Performance Platform':'Platform',
-       'NBC Integrated Platform Performance Objective':'Objective',
-       'NBC Integrated Platform Performance Creative Campaign':'Creative Campaign',
-       'NBC Integrated Platform Performance Asset Type':'Asset Type',
-       'NBC Integrated Platform Performance Genre':'Genre',
-       'NBC Integrated Platform Performance Show':'Show',
-       'NBC Integrated Platform Performance Spend':'Spend',
-       'NBC Integrated Platform Performance CPA':'CPA',
-       'NBC Integrated Platform Performance CPI':'CPI',
-       'NBC Integrated Platform Performance CPM':"CPM",
-       'NBC Integrated Platform Performance CTR':"CTR",
-       'NBC Integrated Platform Performance CPC':"CPC",
-       'NBC Integrated Platform Performance Impressions':"Impressions",
-       'NBC Integrated Platform Performance Clicks':"Clicks",
-       'NBC Integrated Platform Performance All Subscriptions':"AllSubscriptions"})
+Assetdf=df.rename(columns={DICTIONARY_TO_RENAME_COLUMNS})
 
 #Define the asset groupings
 Assetgroupings=['Platform','Creative Campaign','Objective','Creative','Asset Type','Genre','Show']
